@@ -44,7 +44,7 @@ function renderProfile() {
 
   const labels = { github: "GitHub", linkedin: "LinkedIn", scholar: "Google Scholar", huggingface: "Hugging Face", kaggle: "Kaggle", x: "X" };
   let links = SITE.email ? `<a class="btn primary" href="mailto:${esc(SITE.email)}">Contact me</a>` : "";
-  if (SITE.resume) links += `<a class="btn" href="${esc(SITE.resume)}" target="_blank">Résumé</a>`;
+  if (SITE.resume) links += `<a class="btn" href="${esc(SITE.resume)}" download>↓ Download résumé</a>`;
   for (const [k, url] of Object.entries(SITE.links)) {
     if (url) links += `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">${labels[k] || k}</a>`;
   }
@@ -142,7 +142,8 @@ function renderResearch() {
   });
   drawPapers();
 
-  $("libraries").innerHTML = SITE.libraries
+  $("libraries").innerHTML = SITE.libraries.length ? "" : `<p class="muted">Open-source releases coming soon.</p>`;
+  $("libraries").innerHTML += SITE.libraries
     .map((l) => `<div class="card"><h3>${esc(l.name)}</h3><p>${esc(l.description)}</p>
       ${l.install ? `<div class="install">${esc(l.install)}</div>` : ""}
       <div class="chips">${(l.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>

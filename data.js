@@ -9,10 +9,10 @@ const SITE = {
   role: "Data Scientist",
   location: "Atlanta, GA",
   tagline:
-    "I turn data into decisions — building machine learning models, analyses, and AI tools that solve real problems.",
-  avatar: "", // e.g. "assets/me.jpg" — leave empty to show your initials
+    "Data Scientist at The Home Depot building production ML for supply chain — forecasting, optimization, and generative AI tools that save millions.",
+  avatar: "assets/me.jpg",
   email: "", // add the email you want visitors to contact you at
-  resume: "", // e.g. "assets/resume.pdf"
+  resume: "assets/Christy_George_Resume.pdf",
 
   // Your GitHub username: repos are loaded live from GitHub automatically.
   github: "chris2021gsu",
@@ -20,7 +20,7 @@ const SITE = {
 
   links: {
     github: "https://github.com/chris2021gsu",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/cgeorge28/",
     scholar: "", // Google Scholar URL
     huggingface: "", // https://huggingface.co/you
     kaggle: "",
@@ -28,46 +28,77 @@ const SITE = {
   },
 
   about: [
-    "I'm a Data Scientist in Atlanta who likes turning messy, real-world data into models and insights people actually use. My work spans the full workflow — framing the question, cleaning and exploring data, building and evaluating models, and explaining the results to stakeholders.",
-    "Right now I'm going deeper into applied AI: large language models, retrieval-augmented generation (RAG), and how to evaluate AI systems reliably. This site tracks what I build, what I research, and the new AI techniques I'm learning.",
+    "I'm a Data Scientist on The Home Depot's Supply Chain team in Atlanta, with 5+ years of experience building machine learning systems across retail, insurance, and marketing. I take models all the way to production — my container forecasting system, deployed on Vertex AI, saves an estimated ~$15M a year and won an Orange Spotlight Award.",
+    "I hold an M.S. in Data Science and Analytics from Georgia State University and a B.Tech in Electronics and Communication Engineering from NIT Calicut. Today I'm going deeper into generative AI — LLM chatbots, retrieval-augmented generation, and evaluating AI systems — and this site tracks what I build, research, and learn.",
   ],
 
-  // ---- Numbers shown in the hero (update to your real numbers) --------
+  // ---- Numbers shown in the hero -------------------------------------
   stats: [
-    { value: "2+", label: "Years in data science" },
-    { value: "10+", label: "ML & analytics projects" },
-    { value: "4", label: "AI techniques in use" },
-    { value: "3", label: "Certifications" },
+    { value: "5+", label: "Years of experience" },
+    { value: "~$15M", label: "Annual savings from my forecasting system" },
+    { value: "M.S.", label: "Data Science & Analytics" },
+    { value: "4", label: "Companies & research labs" },
   ],
 
   // ---- Skills (grouped) ----------------------------------------------
   skills: {
-    "Languages": ["Python", "SQL", "R"],
-    "Data & Analytics": ["pandas", "NumPy", "Statistics", "A/B testing", "Tableau / Power BI"],
-    "Machine Learning": ["scikit-learn", "XGBoost", "PyTorch", "Time series forecasting"],
-    "AI & GenAI": ["LLMs", "RAG", "Prompt engineering", "NLP"],
-    "Tools & Cloud": ["Git", "Jupyter", "Docker", "AWS / Azure"],
+    "Languages": ["Python", "SQL", "R", "C++"],
+    "Machine Learning": ["scikit-learn", "TensorFlow", "XGBoost", "LightGBM", "Time series forecasting", "NLP", "Deep learning"],
+    "Cloud & MLOps": ["Google Cloud Platform", "BigQuery", "Vertex AI", "Kubeflow", "Airflow", "Kubernetes", "AWS SageMaker", "CI/CD"],
+    "Analytics & Optimization": ["A/B testing", "Statistics", "CPLEX", "Supply chain optimization", "Tableau"],
+    "Generative AI": ["LLM chatbots", "RAG", "Prompt engineering"],
   },
 
   // ---- Experience (most recent first) --------------------------------
   experience: [
     {
-      title: "Data Scientist",
-      org: "[Company name]",
-      period: "[Start year] — Present",
+      title: "Data Scientist – Supply Chain",
+      org: "The Home Depot",
+      period: "Aug 2024 — Present",
       points: [
-        "Build and deploy machine learning models that support business decisions, from data preparation to production.",
-        "Design dashboards and analyses that turn complex data into clear recommendations for stakeholders.",
-        "Prototype LLM-powered tools (RAG, text classification) to automate manual work.",
+        "Built and productionized an ML container forecasting system (time series + regression) on Vertex AI pipelines for weekly org-wide reporting — Orange Spotlight Award winner, saving ~$15M annually.",
+        "Building cost-optimized ordering across TL4, TL3, and SDC Direct channels, delivering savings across non-syn vendors.",
+        "Built an Import Chatbot that lets stakeholders ask questions, generate reports, and access analytics on demand, cutting ad-hoc requests to the data team.",
       ],
     },
     {
-      title: "Data Analyst / Data Science Intern",
-      org: "[Company name]",
-      period: "[Years]",
+      title: "Senior Analyst – Quantitative Research (RM+)",
+      org: "The Home Depot",
+      period: "Feb 2023 — Aug 2024",
       points: [
-        "Cleaned and analysed large datasets with Python and SQL to answer business questions.",
-        "Built predictive models and reported findings to the team.",
+        "Developed a pre-campaign pricing prediction service from scratch to optimize pricing for marketing campaigns.",
+        "Engineered ETL and ML pipelines on Vertex AI and Kubeflow to predict pre-flight campaign KPIs.",
+        "Presented insights to leadership to guide strategic decisions.",
+      ],
+    },
+    {
+      title: "Associate Data Scientist",
+      org: "Mutual of Omaha",
+      period: "Aug 2022 — Feb 2023",
+      points: [
+        "Built marketing analytics models that raised email campaign responses by 18% through media-mix strategies.",
+        "Deployed real-time CTR prediction on AWS SageMaker, improving performance by 11%.",
+      ],
+    },
+    {
+      title: "Data Science Intern",
+      org: "Mutual of Omaha",
+      period: "Apr 2022 — Aug 2022",
+      points: ["Built a workload model predicting claim processing time with 83% accuracy."],
+    },
+    {
+      title: "Graduate Research Assistant – Data Scientist",
+      org: "Georgia State University",
+      period: "Aug 2021 — May 2022",
+      points: ["Healthcare sentiment analysis: used BERT and GloVe to model US public sentiment during the COVID-19 pandemic."],
+    },
+    {
+      title: "Data Scientist",
+      org: "BFOX Technologies",
+      period: "Jan 2018 — Aug 2020",
+      points: [
+        "Built ML models to optimize marketing campaign placements across channels.",
+        "Ran A/B tests and turned results into insights, increasing website traffic by 19%.",
       ],
     },
   ],
@@ -75,60 +106,49 @@ const SITE = {
   // ---- Education ----------------------------------------------------
   education: [
     {
-      degree: "[Degree, e.g. M.S. in Data Science / Analytics]",
-      school: "[University name]",
-      period: "[Years]",
-      note: "Relevant coursework: Machine Learning, Statistical Modeling, Deep Learning, Data Mining",
+      degree: "Master of Science in Data Science and Analytics",
+      school: "Georgia State University, J. Mack Robinson College of Business · Atlanta, GA",
+      period: "Graduated Dec 2022",
+      note: "Studied machine learning, statistical modeling, deep learning, and big-data analytics; worked as a Graduate Research Assistant on NLP sentiment analysis.",
+    },
+    {
+      degree: "Bachelor of Technology in Electronics and Communication Engineering",
+      school: "National Institute of Technology (NIT) Calicut · Kerala, India",
+      period: "Graduated May 2018",
+      note: "Studied signal processing, communication systems, digital electronics, and programming — the math and engineering foundation for my move into data science.",
     },
   ],
 
   // ---- Achievements & certifications ---------------------------------
   achievements: [
-    { year: "[Year]", title: "Machine Learning Specialization", detail: "[Issuer, e.g. DeepLearning.AI / Coursera]", link: "" },
-    { year: "[Year]", title: "Cloud / Data certification", detail: "[e.g. AWS, Azure, or Google Cloud]", link: "" },
-    { year: "[Year]", title: "Hackathon / competition / award", detail: "[What you built or won]" },
+    { year: "2025", title: "Orange Spotlight Award", detail: "The Home Depot, 1H 2025 — for the ML container forecasting system saving ~$15M a year." },
+    { year: "2022", title: "+18% campaign response", detail: "Mutual of Omaha — media-mix marketing models for solicitation email campaigns." },
+    { year: "2022", title: "COVID-19 sentiment research", detail: "Georgia State University — NLP with BERT and GloVe on US public sentiment." },
   ],
 
   // =====================================================================
   //  RESEARCH PAGE
   // =====================================================================
   researchIntro:
-    "My research notebook as a data scientist moving deeper into AI: projects I'm investigating, tools I publish, and the new techniques I'm tracking and learning.",
+    "My research notebook: projects I've investigated, tools I publish, and the new AI techniques I'm tracking as I move deeper into generative AI.",
 
-  researchInterests: ["Applied LLMs", "Retrieval-augmented generation", "Evaluating AI systems", "Time series & forecasting", "Explainable ML"],
+  researchInterests: ["Time series forecasting", "Supply chain optimization", "LLM applications & RAG", "NLP & sentiment analysis", "Evaluating AI systems"],
 
-  // status: "Published" | "Preprint" | "Under review" | "In progress"
+  // status: "Published" | "Preprint" | "Under review" | "In progress" | "Completed"
   papers: [
     {
-      title: "Evaluating Retrieval-Augmented Generation on Domain-Specific Data",
-      authors: "Christy George",
-      venue: "Research project",
-      year: "2026",
-      status: "In progress",
-      abstract: "How well do RAG pipelines answer questions over specialised documents, and which retrieval choices matter most?",
-      links: {},
-    },
-    {
-      title: "Explainable Forecasting: Combining Gradient Boosting with SHAP",
-      authors: "Christy George",
-      venue: "Research project",
-      year: "2026",
-      status: "In progress",
-      abstract: "Making time-series forecasts more trustworthy by explaining which features drive each prediction.",
+      title: "Healthcare Sentiment Analysis of the US Population During COVID-19",
+      authors: "Christy George (Graduate Research Assistant, Georgia State University)",
+      venue: "Research project · Georgia State University",
+      year: "2022",
+      status: "Completed",
+      abstract: "Mined and built metadata from multiple sources, then used ML and deep learning models (BERT, GloVe) to predict public sentiment during the pandemic.",
       links: {},
     },
   ],
 
-  // Open-source libraries / packages you publish
-  libraries: [
-    {
-      name: "[your-library]",
-      description: "Planned: a small Python toolkit for quick EDA and model-evaluation reports.",
-      install: "pip install [your-library]",
-      tags: ["Python", "Data science"],
-      links: { repo: "", pypi: "", docs: "" },
-    },
-  ],
+  // Open-source libraries / packages you publish (add yours here)
+  libraries: [],
 
   // ---- AI Tech Radar: new technologies you're tracking ----------------
   // ring: "Adopt" (I use it), "Trial" (experimenting), "Assess" (reading about), "Watch" (on my radar)
