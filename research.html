@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research</title>
+  <meta name="description" content="Research papers, open-source libraries, and an AI technology radar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="research">
+  <header class="nav">
+    <a class="brand" href="index.html" id="brand"></a>
+    <nav>
+      <a href="index.html">Profile</a>
+      <a href="research.html" class="active">Research</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow">Research lab</p>
+      <h1>Research, libraries &amp; the AI frontier</h1>
+      <p class="lead" id="researchIntro"></p>
+      <div class="chips" id="interests"></div>
+    </section>
+
+    <section>
+      <h2>Papers</h2>
+      <div class="filters" id="paperFilters"></div>
+      <div id="papers" class="list"></div>
+    </section>
+
+    <section>
+      <h2>Open-source libraries</h2>
+      <div id="libraries" class="cards"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>AI tech radar</h2>
+        <span class="muted small">New technologies I'm tracking, by how far I've adopted them</span>
+      </div>
+      <div class="radar-legend" id="radarLegend"></div>
+      <div class="radar-wrap">
+        <div class="radar" id="radar" aria-hidden="true"></div>
+        <div id="radarList" class="list"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reading log</h2>
+      <input type="search" id="readingSearch" class="search" placeholder="Search papers I've read…" />
+      <div id="reading" class="list"></div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

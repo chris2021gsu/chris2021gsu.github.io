@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="AI career portfolio: experience, achievements, and projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="profile">
+  <header class="nav">
+    <a class="brand" href="index.html" id="brand"></a>
+    <nav>
+      <a href="index.html" class="active">Profile</a>
+      <a href="research.html">Research</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="avatar" id="avatar"></div>
+      <div>
+        <p class="eyebrow" id="role"></p>
+        <h1 id="name"></h1>
+        <p class="lead" id="tagline"></p>
+        <div class="links" id="links"></div>
+      </div>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section id="about-section">
+      <h2>About</h2>
+      <div id="about" class="prose"></div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div id="skills" class="skills"></div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div id="experience" class="timeline"></div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div id="education" class="timeline"></div>
+    </section>
+
+    <section>
+      <h2>Achievements &amp; certifications</h2>
+      <div id="achievements" class="cards"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Repositories</h2>
+        <a id="allRepos" class="muted-link" target="_blank" rel="noopener">View all on GitHub →</a>
+      </div>
+      <div id="repos" class="cards"><p class="muted">Loading repositories…</p></div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
