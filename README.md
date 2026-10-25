@@ -31,3 +31,5 @@ To preview locally, open `index.html` in your browser.
 To update the site later, edit `data.js` and push again (or edit it directly on github.com). It redeploys automatically.
 
 Optional: a custom domain (like `yourname.dev`) can be added under **Settings → Pages → Custom domain**. Hosting stays free; you only pay for the domain.
+
+**Seeing an old version after an update?** GitHub lets browsers cache files for 10 minutes. Bump the `?v=` number on the `styles.css`, `data.js` and `app.js` links in `index.html` and `research.html` so visitors get the new files immediately.
